@@ -5,12 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Base {
 	
-	public WebDriver driver;
+	public WebDriver driver; //WebDriver is an interface
 	
-	public void InitializeBrowser()
+	public void initializeBrowser()
 	{
 		driver=new ChromeDriver();
-		driver.get("https://www.google.com/");
+		driver.get("https://selenium.qabible.in/simple-form-demo.php");
 		driver.manage().window().maximize();
 	}
 	public void driverQuit()
@@ -21,8 +21,8 @@ public class Base {
 	public static void main(String[] args) {
 		
 Base base=new Base();
-base.InitializeBrowser();
-base.driverQuit();
+base.initializeBrowser();
+//base.driverQuit();
 	}
 
 }

@@ -55,6 +55,7 @@ public class XpathLocators extends Base
 		//preceeding
 		WebElement xPathPreced1=driver.findElement(By.xpath("//input[@id='value-b']//preceding::button[@id='button-one']"));
 		WebElement xPathPreced2=driver.findElement(By.xpath("//input[@id='value-a']//preceding::button[@id='button-one']"));
+		WebElement xPathShowMessage=driver.findElement(By.xpath("//nav[@class='navbar navbar-expand-md navbar-dark']//preceding::button[@type='button']"));
 		
 		//child
 		WebElement xPathChild1=driver.findElement(By.xpath("//form[@method='POST']//child::div[@id='message-one']"));
@@ -64,6 +65,26 @@ public class XpathLocators extends Base
 		//parent
 		WebElement xPathParent1=driver.findElement(By.xpath("//button[@id='button-two']//parent::form[@method='POST']"));
 		WebElement xPathParent2=driver.findElement(By.xpath("//input[@id='value-b']//parent::div[@class='form-group']"));
+		
+		//Ancestor
+		WebElement xPathAncestor1=driver.findElement(By.xpath("//div[@class='card']//ancestor::button[@id='button-one']"));
+		
+		//Descendant
+		WebElement xPathDescendant1=driver.findElement(By.xpath("//div[@class='form-group']//descendant::label[@for='inputEmail4']"));
+		
+		
+		//Followingsibling
+		WebElement xPathFollowingSibling1=driver.findElement(By.xpath("//label[text()='Enter value A']//following-sibling::input[@class='form-control']"));
+		WebElement xPathFollowingSiblingValueBTextField=driver.findElement(By.xpath("//label[text()='Enter value B']//following-sibling::input[@id='value-b']"));
+		WebElement xPathFollowingSiblingValueATextField=driver.findElement(By.xpath("//label[text()='Enter value A']//following-sibling::input[@id='value-a']"));
+		
+		
+		//PrecedingSibling
+		WebElement xPathPrecedingSibling1=driver.findElement(By.xpath("//input[@type='text']//preceding-sibling::label[@for='inputEmail4']"));
+		WebElement xPathPrecedingSiblingGetTotal=driver.findElement(By.xpath("//div[@id='message-two']//preceding-sibling::button[@id='button-two']"));
+		WebElement xPathPreceedingSiblingValueALabel=driver.findElement(By.xpath("//input[@id='value-a']//preceding-sibling::label[text()='Enter value A']"));
+		
+		
 	}
 
 	public static void main(String[] args)
